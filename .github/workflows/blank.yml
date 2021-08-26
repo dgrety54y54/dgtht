@@ -1,0 +1,17 @@
+#! /bin/sh
+
+# download gdown.pl perl script for downloading from google drive
+wget -w0 https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl 
+
+# download chrome-remote-desktop.deb for 64-bit debian linux
+./gdown.pl https://drive.google.com/file/d/1GRasE1wOaP7kyHpMavLviZRiKlgcuF-c/view?usp=sharing chrome-remote-desktop.deb
+
+sudo dpkg -i chrome-remote-desktop.deb
+
+
+
+## Setup remote server via terminal - skip the GUI!
+
+/opt/google/chrome-remote-desktop/start-host
+
+# Pick a PIN and use it to connect later.
